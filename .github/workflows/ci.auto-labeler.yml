@@ -1,18 +1,19 @@
-name: "CI - Auto Labeler"
+name: CI - Auto Labeler
 on:
+  issues:
+    types: [opened, edited, milestoned]
   pull_request_target:
+    types: [opened]
 
 permissions:
   contents: read
+  issues: write
   pull-requests: write
+  statuses: write
+  checks: write
 
 jobs:
   labeler:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/labeler@v5
-        with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          configuration-path: .github/labeler.yml
-          sync-labels: true
+      - uses: fuxingloh/multi-labeler@v4

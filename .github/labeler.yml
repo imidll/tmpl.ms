@@ -1,72 +1,105 @@
-'📒 Documentation':
-  - changed-files:
-    - any-glob-to-any-file:
-        - '**/*.md'
-        - '**/*.rst'
-        - '**/*.asciidoc'
-        - 'docs/**/*'
-        - 'LICENSE'
-        - 'CONTRIBUTING.md'
-        - 'CHANGELOG.md'
-        - 'README*'
-        - 'CODE_OF_CONDUCT.md'
-        - 'SECURITY.md'
-  - head-branch:
-    - '^(docs?|readme|typos?|comments?|document(ation)?)/i'
+📒 Documentation:
+  files:
+    - '**/*.md'
+    - '**/*.rst'
+    - '**/*.asciidoc'
+    - 'docs/**/*'
+    - 'LICENSE'
+    - 'CONTRIBUTING.md'
+    - 'CHANGELOG.md'
+    - 'README*'
+    - 'CODE_OF_CONDUCT.md'
+    - 'SECURITY.md'
+  branch:
+    - '^docs?/.*'
+    - '^readme/.*'
+    - '^typos?/.*'
+    - '^comments?/.*'
+    - '^document(ation)?/.*'
 
-'🐛 Bug & Hotfix':
-  - head-branch:
-    - '^(fix|race|bug|missing|cor(rect)?|hotfix)/i'
+🐛 Bug & Hotfix:
+  branch:
+    - '^fix/.*'
+    - '^race/.*'
+    - '^bug/.*'
+    - '^missing/.*'
+    - '^cor(rect)?/.*'
+    - '^hotfix/.*'
 
-'🧰 Maintenance & Updates':
-  - head-branch:
-    - '^(improve(ment)?|update|ref(actor)?|depr(ecated)?|rem(ove)?|clean(up)?|unus(ed)?|test(s)?|chore|enhance(ment)?)/i'
+🧰 Maintenance & Updates:
+  branch:
+    - '^improve(ment)?/.*'
+    - '^update/.*'
+    - '^ref(actor)?/.*'
+    - '^depr(ecated)?/.*'
+    - '^rem(ove)?/.*'
+    - '^clean(up)?/.*'
+    - '^unus(ed)?/.*'
+    - '^test(s)?/.*'
+    - '^chore/.*'
+    - '^enhance(ment)?/.*'
 
-'📈 Performance':
-  - head-branch:
-    - '^(perf(ormance)?|optimize|optim(ization)?|bench(mark)?|speed(up)?)/i
+📈 Performance:
+  branch:
+    - '^perf(ormance)?/.*'
+    - '^optimize/.*'
+    - '^optim(ization)?/.*'
+    - '^bench(mark)?/.*'
+    - '^speed(up)?/.*'
 
-'🤖 Dependencies':
-  - changed-files:
-    - any-glob-to-any-file:
-      - 'go.mod'
-      - 'go.sum'
-  - head-branch:
-    - '^(deps?|bump|dependencies|update-deps?)/i'
+🤖 Dependencies:
+  files:
+    - 'go.mod'
+    - 'go.sum'
+  branch:
+    - '^deps?/.*'
+    - '^bump/.*'
+    - '^depend(encies)?/.*'
+    - '^update-deps?/.*'
 
-'🚀 Features & Enhancements':
-  - head-branch:
-    - '^(feat(ure)?|create|impl(ement)?|add)/i'
+🚀 Features & Enhancements:
+  branch:
+    - '^feat(ure)?/.*'
+    - '^create/.*'
+    - '^impl(ement)?/.*'
+    - '^add/.*'
 
-'💥 Breaking-Change':
-  - head-branch:
-    - '^(break(ing)?|major)/i'
+💥 Breaking-Change:
+  branch:
+    - '^break(ing)?/.*'
+    - '^major/.*'
 
-'🔒 Security':
-  - head-branch:
-    - '^(sec(urity)?|vul(nerability)?)/i'
+🔒 Security:
+  branch:
+    - '^sec(urity)?/.*'
+    - '^vul(nerability)?/.*'
 
-'🏗️ CI/CD & Infrastructure':
-  - changed-files:
-    - any-glob-to-any-file: 
-      - '.github/**/*'
-      - '.circleci/**/*'
-      - '.gitlab-ci.yml'
-      - 'Jenkinsfile'
-      - 'docker-compose.*'
-      - 'compose.*'
-      - 'Dockerfile'
-      - 'Vagrantfile'
-      - 'Makefile'
-  - head-branch:
-    - '^(ci|cd|docker(file)?|github|actions?)/i'
+🏗️ CI/CD & Infrastructure:
+  files:
+    - '.github/**/*'
+    - '.circleci/**/*'
+    - '.gitlab-ci.yml'
+    - 'Jenkinsfile'
+    - 'docker-compose.*'
+    - 'compose.*'
+    - 'Dockerfile'
+    - 'Vagrantfile'
+    - 'Makefile'
+  branch:
+    - '^ci/.*'
+    - '^cd/.*'
+    - '^docker(file)?/.*'
+    - '^github/.*'
+    - '^actions?/.*'
 
-'⚙️ Configuration':
-  - changed-files:
-      - any-glob-to-any-file:
-          - '.gitignore'
-          - '.gitattributes'
-          - '.env'
-          - '.env.*'
-  - head-branch:
-      - '^(configs?|conf(iguration)?|settings?|setup)/i'
+⚙️ Configuration:
+  files:
+    - '.gitignore'
+    - '.gitattributes'
+    - '.env'
+    - '.env.*'
+  branch:
+    - '^configs?/.*'
+    - '^conf(iguration)?/.*'
+    - '^settings?/.*'
+    - '^setup/.*'
