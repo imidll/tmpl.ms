@@ -1,105 +1,71 @@
-📒 Documentation:
-  files:
-    - '**/*.md'
-    - '**/*.rst'
-    - '**/*.asciidoc'
-    - 'docs/**/*'
-    - 'LICENSE'
-    - 'CONTRIBUTING.md'
-    - 'CHANGELOG.md'
-    - 'README*'
-    - 'CODE_OF_CONDUCT.md'
-    - 'SECURITY.md'
-  branch:
-    - '^docs?/.*'
-    - '^readme/.*'
-    - '^typos?/.*'
-    - '^comments?/.*'
-    - '^document(ation)?/.*'
+version: "v1"
 
-🐛 Bug & Hotfix:
-  branch:
-    - '^fix/.*'
-    - '^race/.*'
-    - '^bug/.*'
-    - '^missing/.*'
-    - '^cor(rect)?/.*'
-    - '^hotfix/.*'
+labels:
+  - label: 📒 Documentation
+    matcher:
+      branch: '(?i)^(docs?|readme|typos?|comments?|document(ation)?)/.*'
+      files:
+        - '**/*.md'
+        - '**/*.rst'
+        - '**/*.asciidoc'
+        - 'docs/**/*'
+        - 'LICENSE'
+        - 'CONTRIBUTING.md'
+        - 'CHANGELOG.md'
+        - 'README*'
+        - 'CODE_OF_CONDUCT.md'
+        - 'SECURITY.md'
 
-🧰 Maintenance & Updates:
-  branch:
-    - '^improve(ment)?/.*'
-    - '^update/.*'
-    - '^ref(actor)?/.*'
-    - '^depr(ecated)?/.*'
-    - '^rem(ove)?/.*'
-    - '^clean(up)?/.*'
-    - '^unus(ed)?/.*'
-    - '^test(s)?/.*'
-    - '^chore/.*'
-    - '^enhance(ment)?/.*'
+  - label: 🐛 Bug & Hotfix:
+    matcher:
+      branch: '(?i)^(fix|race|bug|missing|cor(rect)?|hotfix)/.*'
 
-📈 Performance:
-  branch:
-    - '^perf(ormance)?/.*'
-    - '^optimize/.*'
-    - '^optim(ization)?/.*'
-    - '^bench(mark)?/.*'
-    - '^speed(up)?/.*'
+  - label: 🧰 Maintenance & Updates
+    matcher:
+      branch: '(?i)^(improve(ment)?|update|ref(actor)?|depr(ecated)?|rem(ove)?|clean(up)?|unus(ed)?|tests?|chore|enhance(ment)?)/.*'
 
-🤖 Dependencies:
-  files:
-    - 'go.mod'
-    - 'go.sum'
-  branch:
-    - '^deps?/.*'
-    - '^bump/.*'
-    - '^depend(encies)?/.*'
-    - '^update-deps?/.*'
+  - label: 📈 Performance
+    matcher:
+      branch: '(?i)^(perf(ormance)?|optimize|optim(ization)?|bench(mark)?|speed(up)?)/.*'
 
-🚀 Features & Enhancements:
-  branch:
-    - '^feat(ure)?/.*'
-    - '^create/.*'
-    - '^impl(ement)?/.*'
-    - '^add/.*'
+  - label: 🤖 Dependencies
+    matcher:
+      branch: '(?i)^(deps?|bump|depend(encies)?|update-deps?)/.*'
+      files:
+        - 'go.mod'
+        - 'go.sum'
 
-💥 Breaking-Change:
-  branch:
-    - '^break(ing)?/.*'
-    - '^major/.*'
+  - label: 🚀 Features & Enhancements
+    matcher:
+      branch: '(?i)^(feat(ure)?|create|impl(ement)?|add)/.*'
 
-🔒 Security:
-  branch:
-    - '^sec(urity)?/.*'
-    - '^vul(nerability)?/.*'
+  - label: 💥 Breaking-Change
+    matcher:
+      branch: '(?i)^(break(ing)?|major)/.*'
 
-🏗️ CI/CD & Infrastructure:
-  files:
-    - '.github/**/*'
-    - '.circleci/**/*'
-    - '.gitlab-ci.yml'
-    - 'Jenkinsfile'
-    - 'docker-compose.*'
-    - 'compose.*'
-    - 'Dockerfile'
-    - 'Vagrantfile'
-    - 'Makefile'
-  branch:
-    - '^ci/.*'
-    - '^cd/.*'
-    - '^docker(file)?/.*'
-    - '^github/.*'
-    - '^actions?/.*'
+  - label: 🔒 Security
+    matcher:
+      branch: '(?i)^(sec(urity)?|vul(nerability)?)/.*'
 
-⚙️ Configuration:
-  files:
-    - '.gitignore'
-    - '.gitattributes'
-    - '.env'
-    - '.env.*'
-  branch:
-    - '^configs?/.*'
-    - '^conf(iguration)?/.*'
-    - '^settings?/.*'
-    - '^setup/.*'
+  - label: 🏗️ CI/CD & Infrastructure
+    matcher:
+      branch: '(?i)^(ci|cd|docker(file)?|github|actions?)/.*'
+      files:
+        - '.github/**/*'
+        - '.circleci/**/*'
+        - '.gitlab-ci.yml'
+        - 'Jenkinsfile'
+        - 'docker-compose.*'
+        - 'compose.*'
+        - 'Dockerfile'
+        - 'Vagrantfile'
+        - 'Makefile'
+
+  - label: ⚙️ Configuration
+    matcher:
+      branch: '(?i)^(configs?|conf(iguration)?|settings?|setup)/.*'
+      files:
+        - '.gitignore'
+        - '.gitattributes'
+        - '.env'
+        - '.env.*'
