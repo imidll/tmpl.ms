@@ -3,7 +3,7 @@ version: "v1"
 labels:
   - label: 📒 Documentation
     matcher:
-      branch: '(?i)^(docs?|readme|typos?|comments?|document(ation)?)/.*'
+      branch: '^([Dd]ocs?|[Rr]eadme|[Tt]ypos?|[Cc]omments?|[Dd]ocument(ation)?)/.*'
       files:
         - '**/*.md'
         - '**/*.rst'
@@ -18,38 +18,38 @@ labels:
 
   - label: 🐛 Bug & Hotfix
     matcher:
-      branch: '(?i)^(fix|race|bug|missing|cor(rect)?|hotfix)/.*'
+      branch: '^([Ff]ix|[Rr]ace|[Bb]ug|[Mm]issing|[Cc]or(rect)?|[Hh]otfix)/.*'
 
   - label: 🧰 Maintenance & Updates
     matcher:
-      branch: '(?i)^(improve(ment)?|update|ref(actor)?|depr(ecated)?|rem(ove)?|clean(up)?|unus(ed)?|tests?|chore|enhance(ment)?)/.*'
+      branch: '^([Ii]mprove(ment)?|[Uu]pdate|[Rr]ef(actor)?|[Dd]epr(ecated)?|[Rr]em(ove)?|[Cc]lean(up)?|[Uu]nus(ed)?|[Tt]ests?|[Cc]hore|[Ee]nhance(ment)?)/.*'
 
   - label: 📈 Performance
     matcher:
-      branch: '(?i)^(perf(ormance)?|optimize|optim(ization)?|bench(mark)?|speed(up)?)/.*'
+      branch: '^([Pp]erf(ormance)?|[Oo]ptimize|[Oo]ptim(ization)?|[Bb]ench(mark)?|[Ss]peed(up)?)/.*'
 
   - label: 🤖 Dependencies
     matcher:
-      branch: '(?i)^(deps?|bump|depend(encies)?|update-deps?)/.*'
+      branch: '^([Dd]eps?|[Bb]ump|[Dd]epend(encies)?|[Uu]pdate-[Dd]eps?)/.*'
       files:
         - 'go.mod'
         - 'go.sum'
 
   - label: 🚀 Features & Enhancements
     matcher:
-      branch: '(?i)^(feat(ure)?|create|impl(ement)?|add)/.*'
+      branch: '^([Ff]eat(ure)?|[Cc]reate|[Ii]mpl(ement)?|[Aa]dd)/.*'
 
   - label: 💥 Breaking-Change
     matcher:
-      branch: '(?i)^(break(ing)?|major)/.*'
+      branch: '^([Bb]reak(ing)?|[Mm]ajor)/.*'
 
   - label: 🔒 Security
     matcher:
-      branch: '(?i)^(sec(urity)?|vul(nerability)?)/.*'
+      branch: '^([Ss]ec(urity)?|[Vv]ul(nerability)?)/.*'
 
   - label: 🏗️ CI/CD & Infrastructure
     matcher:
-      branch: '(?i)^(ci|cd|docker(file)?|github|actions?)/.*'
+      branch: '^([Cc]i|[Cc]d|[Dd]ocker(file)?|[Gg]it[Hh]ub|[Aa]ctions?)/.*'
       files:
         - '.github/**/*'
         - '.circleci/**/*'
@@ -63,7 +63,7 @@ labels:
 
   - label: ⚙️ Configuration
     matcher:
-      branch: '(?i)^(configs?|conf(iguration)?|settings?|setup)/.*'
+      branch: '^([Cc]onfigs?|[Cc]onf(iguration)?|[Ss]ettings?|[Ss]etup)/.*'
       files:
         - '.gitignore'
         - '.gitattributes'
