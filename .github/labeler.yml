@@ -16,7 +16,7 @@ labels:
         - 'CODE_OF_CONDUCT.md'
         - 'SECURITY.md'
 
-  - label: 🐛 Bug & Hotfix:
+  - label: 🐛 Bug & Hotfix
     matcher:
       branch: '(?i)^(fix|race|bug|missing|cor(rect)?|hotfix)/.*'
 
