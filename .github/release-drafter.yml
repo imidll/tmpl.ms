@@ -1,0 +1,117 @@
+branches: [main]
+
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+
+categories:
+  - title: '💥 Breaking Changes'
+    labels:
+      - '💥 Breaking-Change'
+    collapse-after: 5
+  
+  - title: '🔒 Security Fixes'
+    labels:
+      - '🔒 Security'
+    collapse-after: 5
+  
+  - title: '🚀 New Features'
+    labels:
+      - '🚀 Features & Enhancements'
+    collapse-after: 10
+  
+  - title: '🐛 Bug Fixes'
+    labels:
+      - '🐛 Bug & Hotfix'
+    collapse-after: 10
+  
+  - title: '📈 Performance Improvements'
+    labels:
+      - '📈 Performance'
+    collapse-after: 5
+
+  - title: '🧰 Maintenance & Updates'
+    labels:
+      - '🧰 Maintenance & Updates'
+    collapse-after: 15
+  
+  - title: '📒 Documentation'
+    labels:
+      - '📒 Documentation'
+    collapse-after: 10
+
+  - title: '🤖 Dependencies'
+    labels:
+      - '🤖 Dependencies'
+    collapse-after: 15
+
+  - title: '🏗️ CI/CD & Infrastructure'
+    labels:
+      - '🏗️ CI/CD & Infrastructure'
+    collapse-after: 10
+
+  - title: '⚙️ Configuration'
+    labels:
+      - '⚙️ Configuration'
+    collapse-after: 10
+
+change-template: '- $TITLE by @$AUTHOR in #$NUMBER'
+
+template: |
+  ## ⚡️ What's New in $RESOLVED_VERSION
+
+  $CHANGES
+
+  ---
+
+  **🔗 Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
+
+  ## 🧑‍💻 Contributors
+
+  $CONTRIBUTORS
+
+version-resolver:
+  major:
+    labels:
+      - '💥 Breaking-Change'
+  minor:
+    labels:
+      - '🚀 Features & Enhancements'
+      - '📈 Performance'
+      - '🔒 Security'
+  patch:
+    labels:
+      - '🐛 Bug & Hotfix'
+      - '🧰 Maintenance & Updates'
+      - '📒 Documentation'
+      - '🤖 Dependencies'
+      - '🏗️ CI/CD & Infrastructure'
+      - '⚙️ Configuration'
+  default: patch
+
+exclude-labels:
+  - 'skip-changelog'
+  - 'invalid'
+  - 'duplicate'
+  - 'wontfix'
+  - 'wip'
+  - 'work-in-progress'
+
+sort-direction: 'descending'
+sort-by: 'merged_at'
+
+include-pre-releases: false
+
+footer: |
+  
+  ## 🤝 Contributing
+  
+  We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+  
+  ## 💪 Support
+  
+  If you find this project helpful, please consider:
+  - 🌟 Starring the repository
+  - 🐛 Reporting bugs or suggesting features
+  - 🔀 Contributing code improvements
+  
+  **Built with ❤️ using [Fiber](https://gofiber.io)**

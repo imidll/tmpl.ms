@@ -1,0 +1,71 @@
+version: "v1"
+
+labels:
+  - label: 📒 Documentation
+    matcher:
+      branch: '^([Dd]ocs?|[Rr]eadme|[Tt]ypos?|[Cc]omments?|[Dd]ocument(ation)?)/.*'
+      files:
+        - '**/*.md'
+        - '**/*.rst'
+        - '**/*.asciidoc'
+        - 'docs/**/*'
+        - 'LICENSE'
+        - 'CONTRIBUTING.md'
+        - 'CHANGELOG.md'
+        - 'README*'
+        - 'CODE_OF_CONDUCT.md'
+        - 'SECURITY.md'
+
+  - label: 🐛 Bug & Hotfix
+    matcher:
+      branch: '^([Ff]ix|[Rr]ace|[Bb]ug|[Mm]issing|[Cc]or(rect)?|[Hh]otfix)/.*'
+
+  - label: 🧰 Maintenance & Updates
+    matcher:
+      branch: '^([Ii]mprove(ment)?|[Uu]pdate|[Rr]ef(actor)?|[Dd]epr(ecated)?|[Rr]em(ove)?|[Cc]lean(up)?|[Uu]nus(ed)?|[Tt]ests?|[Cc]hore|[Ee]nhance(ment)?)/.*'
+
+  - label: 📈 Performance
+    matcher:
+      branch: '^([Pp]erf(ormance)?|[Oo]ptimize|[Oo]ptim(ization)?|[Bb]ench(mark)?|[Ss]peed(up)?)/.*'
+
+  - label: 🤖 Dependencies
+    matcher:
+      branch: '^([Dd]eps?|[Bb]ump|[Dd]epend(encies)?|[Uu]pdate-[Dd]eps?)/.*'
+      files:
+        - 'go.mod'
+        - 'go.sum'
+
+  - label: 🚀 Features & Enhancements
+    matcher:
+      branch: '^([Ff]eat(ure)?|[Cc]reate|[Ii]mpl(ement)?|[Aa]dd)/.*'
+
+  - label: 💥 Breaking-Change
+    matcher:
+      branch: '^([Bb]reak(ing)?|[Mm]ajor)/.*'
+
+  - label: 🔒 Security
+    matcher:
+      branch: '^([Ss]ec(urity)?|[Vv]ul(nerability)?)/.*'
+
+  - label: 🏗️ CI/CD & Infrastructure
+    matcher:
+      branch: '^([Cc]i|[Cc]d|[Dd]ocker(file)?|[Gg]it[Hh]ub|[Aa]ctions?)/.*'
+      files:
+        - '.github/**/*'
+        - '.circleci/**/*'
+        - '.gitlab-ci.yml'
+        - 'Jenkinsfile'
+        - 'docker-compose.*'
+        - 'compose.*'
+        - 'Dockerfile'
+        - 'Vagrantfile'
+        - 'Makefile'
+
+  - label: ⚙️ Configuration
+    matcher:
+      branch: '^([Cc]onfigs?|[Cc]onf(iguration)?|[Ss]ettings?|[Ss]etup)/.*'
+      files:
+        - '.gitignore'
+        - '.gitattributes'
+        - '.env'
+        - '.env.*'
